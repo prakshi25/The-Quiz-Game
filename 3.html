@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <script>
+        const hsubmit=()=>
+        {
+            var s3=0;
+
+            if(document.getElementById("r2").checked==true)
+            {
+                s3=s3+10;
+                localStorage.setItem("s3", s3);
+            }
+            else
+            {
+                s3=0;
+                localStorage.setItem("s3", s3);
+            }
+
+            window.location.href = "file:///Users/prakshi/Downloads/KBC/4.html";
+        }
+    </script>
+    
+    <div class = "container w-25 p-5">
+        <form name="frm2">
+            <h3 style="color:turquoise";> QUIZ</h3>
+            <br>
+            <div class="form-row">
+                <div class="col">
+                <b> Q3: Which is the national sport of India? </b>
+                 </div>
+                 </div>
+                 <br>
+                 <div class="form-row">
+                   <div class="col">
+                       <input type="radio" value="Cricket" name="r1" id="r1"> Cricket<br>
+                       <input type="radio" value="Hockey" name="r1" id="r2"> Hockey<br>
+                       <input type="radio" value="Kabbadi" name="r1" id="r3"> Kabbadi<br>
+                       <input type="radio" value="Football" name="r1" id="r4"> Football<br>
+                   </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <button type="button" value="Add" class="btn btn-outline-success" id="btnans" style="color: white; border-color: turquoise; background-color: turquoise;" onclick="hsubmit();">Submit</button>
+                    </div>
+                 </div>
+        </form>
+    </div>
+</body>
+</html>

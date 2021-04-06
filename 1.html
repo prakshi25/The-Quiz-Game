@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <script>
+        const hsubmit=()=>
+        {
+            var s1=0;
+
+            if(document.getElementById("r3").checked==true)
+            {
+                s1=s1+10;
+                localStorage.setItem("s1", s1);
+            }
+            else
+            {
+                s1=0;
+                localStorage.setItem("s1", s1);
+            }
+
+            window.location.href = "file:///Users/prakshi/Downloads/KBC/2.html";
+        }
+    </script>
+    
+    <div class = "container w-25 p-5">
+        <form name="frm2">
+            <h3 style="color:turquoise";> QUIZ</h3>
+            <br>
+            <div class="form-row">
+                <div class="col">
+                <b> Q1: Who was the first Prime Minister of India? </b>
+                 </div>
+                 </div>
+                 <br>
+                 <div class="form-row">
+                   <div class="col">
+                       <input type="radio" value="Indira Gandhi" name="r1" id="r1"> Indira Gandhi<br>
+                       <input type="radio" value="Narendra Modi" name="r1" id="r2"> Narendra Modi<br>
+                       <input type="radio" value="Jawaharlal Nehru" name="r1" id="r3"> Jawaharlal Nehru<br>
+                       <input type="radio" value="Lal Bahadur Shastri" name="r1" id="r4"> Lal Bahadur Shastri<br>
+                   </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <button type="button" value="Add" class="btn btn-outline-success" id="btnans" style="color: white; border-color: turquoise; background-color: turquoise;" onclick="hsubmit();">Submit</button>
+                    </div>
+                 </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <script>
+        const hsubmit=()=>
+        {
+            var s4=0;
+
+            if(document.getElementById("r4").checked==true)
+            {
+                s4=s4+10;
+                localStorage.setItem("s4", s4);
+            }
+            else
+            {
+                s4=0;
+                localStorage.setItem("s4", s4);
+            }
+            window.location.href = "file:///Users/prakshi/Downloads/KBC/5.html";
+        }
+    </script>
+    
+    <div class = "container w-25 p-5">
+        <form name="frm2">
+            <h3 style="color:turquoise";> QUIZ</h3>
+            <br>
+            <div class="form-row">
+                <div class="col">
+                <b> Q4: Which place in India is also known as the “Land of Rising Sun”? </b>
+                 </div>
+                 </div>
+                 <br>
+                 <div class="form-row">
+                   <div class="col">
+                       <input type="radio" value="Sikkim" name="r1" id="r1"> Sikkim<br>
+                       <input type="radio" value="Karnataka" name="r1" id="r2"> Karnataka<br>
+                       <input type="radio" value="Assam" name="r1" id="r3"> Assam<br>
+                       <input type="radio" value="Arunachal Pradesh" name="r1" id="r4"> Arunachal Pradesh<br>
+                   </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <button type="button" value="Add" class="btn btn-outline-success" id="btnans" style="color: white; border-color: turquoise; background-color: turquoise;" onclick="hsubmit();">Submit</button>
+                    </div>
+                 </div>
+        </form>
+    </div>
+</body>
+</html>
